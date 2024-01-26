@@ -3,7 +3,6 @@ const Project = [
 	{
 		title:'Galaxy Generator',
         description:'I completed this project using three.js to practice working with particles.',
-		video: '/projects/generatorgalaxy.mov',
 		image: '/projects/galaxyImage.png',
         date: "october 2023",
 		techno: "threejs",
@@ -13,7 +12,6 @@ const Project = [
 	{
 		title:'Haunted House',
         description:'This project is one of my first endeavors to learn how to create an environment using the tools of three.js. This is a haunted house with apparent ghosts lurking around.',
-		video: '/projects/hauntedHouse.mov',
 		image: '/projects/hauntedHouseImage.png',
         date: "october 2023",
 		techno: "threejs",
@@ -23,7 +21,6 @@ const Project = [
 	{
 		title:'Portal Scene R3F',
         description:"This is a project where I learned to use Blender to create a model and then export it to a react-three-fiber app. It's a portal that allows you to teleport wherever you wish.",
-		video: '/projects/portal.mov',
 		image: '/projects/portalImage.png',
         date: "october 2023",
 		techno: "R3F/Drei",

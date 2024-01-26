@@ -3,11 +3,13 @@ import BackgroundHome from "@/components/BackgroundHome";
 import Project from "@/components/Project";
 import project from "@/data/Project";
 
+import CarouselProjects from "@/components/CarouselProjects";
+
 export default function Home() {
   return (
     <div>
       <Contact />
-      <div className="text-center flex flex-col mt-10 items-center gap-6 h-screen">
+      <div className="text-center flex flex-col pt-32 items-center gap-6 h-screen">
         <h1 className=" text-4xl md:text-7xl font-semibold">Camille Metard</h1>
         <span className="text-xl md:text-3xl ">Développeur web fullstack</span>
         <span className="w-3/4 md:w-1/2 text-md">
@@ -21,12 +23,10 @@ export default function Home() {
       </div>
       <BackgroundHome />
 
+      <section className="w-screen flex justify-center">
+        <CarouselProjects/>
+      </section>
       
-      {project.map((item) =>  {
-        return (
-          <Project key={item.title}/>
-        )
-      })}
 
     </div>
   );
