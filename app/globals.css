@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+.svg-icon {
+  fill: rgb(188, 185, 185); /* Couleur par défaut */
+}
+
+.svg-icon:hover {
+  fill: inherit; /* Hérite la couleur de l'élément parent au survol */
+}
+
+/* .scrollable-div::-webkit-scrollbar {
+  display: none;
+} */
+
+.overflow-hidden-important {
+  overflow: hidden !important;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
