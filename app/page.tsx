@@ -1,7 +1,5 @@
 import Contact from "@/components/Contact";
 import BackgroundHome from "@/components/BackgroundHome";
-import Project from "@/components/Project";
-import project from "@/data/Project";
 
 import CarouselProjects from "@/components/CarouselProjects";
 
