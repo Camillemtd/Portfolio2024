@@ -22,7 +22,7 @@ export default function Home() {
 
       <section className="bg-white p-10">
         <h2 className="text-5xl text-black p-10">Projects</h2>
-        <div className="grid grid-cols-3 gap-5 justify-around">
+        <div className="grid lg:grid-cols-3 gap-5 justify-around">
           {project.map((item) => {
             return <Project key={item.title} data={item} />
           })}
