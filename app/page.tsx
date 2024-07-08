@@ -1,7 +1,7 @@
-import Contact from "@/components/Contact";
-import BackgroundHome from "@/components/BackgroundHome";
-
-import CarouselProjects from "@/components/CarouselProjects";
+import Contact from "@/components/Contact"
+import BackgroundHome from "@/components/BackgroundHome"
+import project from "@/data/Project"
+import Project from "@/components/Project"
 
 export default function Home() {
   return (
@@ -17,15 +17,17 @@ export default function Home() {
           back-end, je travaille avec Node.js. N'hésitez pas à me contacter pour
           discuter !
         </span>
-        
       </div>
       <BackgroundHome />
 
-      <section className="w-screen flex justify-center">
-        <CarouselProjects/>
+      <section className="bg-white p-10">
+        <h2 className="text-5xl text-black p-10">Projects</h2>
+        <div className="grid grid-cols-3 gap-5 justify-around">
+          {project.map((item) => {
+            return <Project key={item.title} data={item} />
+          })}
+        </div>
       </section>
-      
-
     </div>
-  );
+  )
 }

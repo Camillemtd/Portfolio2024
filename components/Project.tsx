@@ -1,47 +1,32 @@
-"use client";
-import React from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+"use client"
+import React from "react"
+import { motion } from "framer-motion"
+import Image from "next/image"
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
 interface ProjectProps {
   data: {
-    title: string;
-    description: string;
-    image: string;
-    date: string;
-    techno: string;
-    lienGit?: string;
-    link?: string;
-  };
+    title: string
+    description: string
+    image: string
+    date: string
+    techno: string
+    lienGit?: string
+    link?: string
+  }
 }
 
-// Correction ici: 'const Project: React.FC<ProjectProps> = ...'
-const Project: React.FC<ProjectProps> = ({ data }) => {
-  // Vous pouvez maintenant utiliser 'data.title', 'data.description', etc. dans votre composant
+export default function Project({ data }: ProjectProps) {
   return (
-    <div className="w-full h-screen pt-10  md:p-5">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="w-full flex flex-col relative h-full gap-5 justify-around md:border border-fuchsia-300 rounded-xl p-1 md:p-3"
-      >
-        <div className="flex flex-col gap-3">
-          <h2 className="text-3xl">{data.title}</h2>
-          <span className="w-full">{data.date}</span>
-          <span className="text-blue-600">{data.techno}</span>
-        </div>
-
-        <Image
-          alt={data.title}
-          src={data.image}
-          width={600}
-          height={600}
-          className="border-y border-orange-500 rounded-xl md:self-center"
-        />
-        <div className="">{data.description}</div>
-        <div className="w-full flex gap-5 mb-16 z-50">
+    <>
+      <Card className="m-3 transition-transform transform hover:scale-105 hover:shadow-lg background">
+        <CardHeader >
+          <div className="flex justify-between"><div>
+            <h2 className="text-3xl">{data.title}</h2>
+          <div> {data.date}</div>
+          <div>{data.techno}</div>
+          </div>
+          <div className="w-full flex gap-5 mb-16 z-50 justify-end">
           <div className="w-10 h-10">
             <a
               href={data.lienGit}
@@ -78,11 +63,24 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
               </svg>
             </a>
           </div>
+        </div></div>
           
-        </div>
-      </motion.div>
-    </div>
-  );
-};
-
-export default Project;
+          
+        </CardHeader>
+        <CardContent>
+          <div className="border border-2">
+            <Image
+              src={data.image}
+              alt={data.title}
+              width={1200}
+              height={1200}
+            />
+          </div>
+          <div className="mt-3">
+            {data.description}
+          </div>
+        </CardContent>
+      </Card>
+    </>
+  )
+}
