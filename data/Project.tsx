@@ -7,7 +7,7 @@ const Project = [
 		date: "mai 2024",
 		techno: "Nextjs/Typescript",
 		lienGit: 'https://github.com/Wakushi/mosaic-app',
-		link: 'mosaic-block-magic.vercel.app/'
+		link: 'https://mosaic-block-magic.vercel.app/'
 	},
 	{
 		title:'arewefastwet',
